@@ -20,6 +20,10 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 1.0.10
+
+Updated security vulnerable dependecy per CVE-2017-16042. Growl to 1.10.5
+
 ### 1.0.9
 
 Merged a PR from scout199 to for a HTML-profile view and addition of username setting.

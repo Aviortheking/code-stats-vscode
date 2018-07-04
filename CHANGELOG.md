@@ -2,6 +2,12 @@
 
 All notable changes to the "code-stats-vscode" extension will be documented in this file.
 
+## [1.0.10] - 2018-07-04
+
+### Changed
+
+Updated security vulnerable dependecy per CVE-2017-16042. Growl to 1.10.5
+
 ## [1.0.9] - 2018-07-04
 
 ### Added
