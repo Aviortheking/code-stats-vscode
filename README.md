@@ -2,6 +2,10 @@
 
 This is a Visual Studio Code extension to send updates to [https://codestats.net](https://codestats.net)
 
+## NOTICE
+
+I had to publish the latest version under a new publisher account. This means that if you have the old version installed you won't get an update for it. You have to uninstall the 1.0.8 or older version and install the new one from the new publisher name 'riussi' from https://marketplace.visualstudio.com/items?itemName=riussi.code-stats-vscode
+
 ## Features
 
 This extension tracks the amount of changes you make to your files and sends out pulses to [https://codestats.net/api-docs#pulse](https://codestats.net/api-docs#pulse) to track your XP.
