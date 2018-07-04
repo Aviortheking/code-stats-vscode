@@ -12,11 +12,19 @@ You need to register your machine at [https://codestats.net/my/machines](https:/
 
 This extension contributes the following settings:
 
-* `codestats.apikey`: API key for your machine
+- `codestats.apikey`: API key for your machine
+- `codestats.apiurl`: Base URL for the API-endpoint
+- `codestats.username`: Code::stats username
 
 ## Known Issues
 
 ## Release Notes
+
+### 1.0.9
+
+Merged a PR from scout199 to for a HTML-profile view and addition of username setting.
+
+Change in the extension publisher account from juha-ristolainen to riussi. You need to uninstall the old extension and re-install.
 
 ### 1.0.8
 
@@ -57,9 +65,8 @@ Added the .vsix installation package as well.
 
 Initial release of code-stats-vscode
 
-
 ### For more information
 
-* [Github repository](https://github.com/riussi/code-stats-vscode)
+- [Github repository](https://github.com/riussi/code-stats-vscode)
 
 **Enjoy!**
