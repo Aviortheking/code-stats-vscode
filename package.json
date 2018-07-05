@@ -2,7 +2,11 @@
   "name": "code-stats-vscode",
   "displayName": "Code::Stats",
   "description": "Code::Stats package for Visual Studio Code",
+<<<<<<< HEAD
   "version": "1.0.11",
+=======
+  "version": "1.0.12",
+>>>>>>> develop
   "license": "MIT",
   "publisher": "riussi",
   "contributors": [
@@ -61,10 +65,15 @@
   "devDependencies": {
     "typescript": "^2.9.1",
     "vscode": "^1.1.0",
-    "mocha": "^2.3.3",
+    "mocha": "^5.2.0",
     "growl": "^1.10.5",
+<<<<<<< HEAD
     "@types/node": "^6.0.40",
     "@types/mocha": "^2.2.32"
+=======
+    "@types/node": "^10.5.1",
+    "@types/mocha": "^5.2.4"
+>>>>>>> develop
   },
   "dependencies": {
     "axios": "0.18.0",

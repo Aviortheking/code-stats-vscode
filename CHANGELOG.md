@@ -2,11 +2,24 @@
 
 All notable changes to the "code-stats-vscode" extension will be documented in this file.
 
+<<<<<<< HEAD
+=======
+## [1.0.12] - 2018-07-05
+
+### Changed
+
+Updated some outdated dependency packages.
+
+>>>>>>> develop
 ## [1.0.11] - 2018-07-04
 
 ### Changed
 
+<<<<<<< HEAD
 Fixed the missing lodash.template dependency for the merged HTML profile view.
+=======
+Fixed the missing lodast.template dependency
+>>>>>>> develop
 
 ## [1.0.10] - 2018-07-04
 

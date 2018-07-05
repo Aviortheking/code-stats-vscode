@@ -24,6 +24,13 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+<<<<<<< HEAD
+=======
+### 1.0.12
+
+Updated some outdated dependency packages.
+
+>>>>>>> develop
 ### 1.0.11
 
 Fixed the missing lodash.template dependency for the merged HTML profile view.
