@@ -24,6 +24,14 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 1.0.12
+
+Updated some outdated dependency packages.
+
+### 1.0.11
+
+Fixed the missing lodash.template dependency for the merged HTML profile view.
+
 ### 1.0.10
 
 Updated security vulnerable dependecy per CVE-2017-16042. Growl to 1.10.5
