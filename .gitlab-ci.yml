@@ -5,26 +5,35 @@ before_script:
   - npm install -g typescript
 
 stages:
-  - prepare
+  - test
   - build
 #  - package
 
-prepare:
-  stage: prepare
+code_quality:
+  stage: test
+  image: docker:stable
+  variables:
+    DOCKER_DRIVER: overlay2
+  allow_failure: true
+  services:
+    - docker:stable-dind
   script:
-    - npm install
-  cache:
-    paths:
-      - node_modules/
+    - export SP_VERSION=$(echo "$CI_SERVER_VERSION" | sed 's/^\([0-9]*\)\.\([0-9]*\).*/\1-\2-stable/')
+    - docker run
+      --env SOURCE_CODE="$PWD"
+      --volume "$PWD":/code
+      --volume /var/run/docker.sock:/var/run/docker.sock
+      "registry.gitlab.com/gitlab-org/security-products/codequality:$SP_VERSION" /code
+  artifacts:
+    reports:
+      codequality: gl-code-quality-report.json
 
 transpile:
   stage: build
+  before_script:
+    - npm install
   script:
     - tsc -p ./
-  cache:
-    paths:
-      - node_modules/
-    policy: pull
 #package:
 #  stage: package
 #  cache:
@@ -36,3 +45,4 @@ transpile:
 #  artifacts:
 #    paths:
 #      - code-stats-vscode-*.vsix
+
