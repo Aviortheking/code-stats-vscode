@@ -2,7 +2,7 @@
   "name": "code-stats-vscode",
   "displayName": "Code::Stats",
   "description": "Code::Stats package for Visual Studio Code",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "license": "MIT",
   "publisher": "riussi",
   "contributors": [
@@ -16,7 +16,7 @@
     "url": "https://github.com/riussi/code-stats-vscode"
   },
   "engines": {
-    "vscode": "^1.10.0"
+    "vscode": "^1.29.1"
   },
   "categories": [
     "Other"
@@ -63,7 +63,7 @@
     "@types/node": "^10.5.1",
     "growl": "^1.10.5",
     "mocha": "^5.2.0",
-    "typescript": "^2.9.1",
+    "typescript": "^2.9.2",
     "vscode": "^1.1.22"
   },
   "dependencies": {
