@@ -1,7 +1,7 @@
 image: node:10-alpine
 
 stages:
-  - build
+  #  - build
   - test
 #  - package
 
@@ -23,15 +23,14 @@ code_quality:
   artifacts:
     reports:
       codequality: gl-code-quality-report.json
-
-transpile:
-  stage: build
-  before_script:
-    - npm install -g vsce
-    - npm install -g typescript
-    - npm install
-  script:
-    - tsc -p ./
+#transpile:
+#  stage: build
+#  before_script:
+#    - npm install -g vsce
+#    - npm install -g typescript
+#    - npm install
+#  script:
+#    - tsc -p ./
 #package:
 #  stage: package
 #  cache:
