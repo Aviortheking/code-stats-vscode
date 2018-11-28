@@ -24,6 +24,10 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 1.0.13
+
+Updated some outdated vulnerable dependency packages. Moved the repo to Gitlab.
+
 ### 1.0.12
 
 Updated some outdated dependency packages.
@@ -83,6 +87,6 @@ Initial release of code-stats-vscode
 
 ### For more information
 
-- [Github repository](https://github.com/riussi/code-stats-vscode)
+- [Gitlab repository](https://gitlab.com/juha.ristolainen/code-stats-vscode)
 
 **Enjoy!**

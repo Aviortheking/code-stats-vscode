@@ -12,8 +12,8 @@
   ],
   "icon": "logo.png",
   "repository": {
-    "type": "github",
-    "url": "https://github.com/riussi/code-stats-vscode"
+    "type": "gitlab",
+    "url": "https://gitlab.com/juha.ristolainen/code-stats-vscode"
   },
   "engines": {
     "vscode": "^1.29.1"

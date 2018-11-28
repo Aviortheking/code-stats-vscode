@@ -2,6 +2,12 @@
 
 All notable changes to the "code-stats-vscode" extension will be documented in this file.
 
+## [1.0.13] - 2018-11-28
+
+### Changed
+
+Updated some outdated vulnerable dependency packages.
+
 ## [1.0.12] - 2018-07-05
 
 ### Changed

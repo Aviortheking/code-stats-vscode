@@ -1,12 +1,37 @@
-image: node:latest
+image: node:10-alpine
 
-# This folder is cached between builds
-# http://docs.gitlab.com/ce/ci/yaml/README.html#cache
-cache:
-  paths:
-    - node_modules/
+before_script:
+  - npm install -g vsce
 
-build:
+stages:
+  - prepare
+  - build
+#  - package
+
+prepare:
+  stage: prepare
   script:
     - npm install
-    - vsce package
+  cache:
+    paths:
+      - node_modules/
+
+transpile:
+  stage: build
+  script:
+    - tsc -p ./
+  cache:
+    paths:
+      - node_modules/
+    policy: pull
+#package:
+#  stage: package
+#  cache:
+#    paths:
+#      - node_modules/
+#    policy: pull
+#  script:
+#    - vsce package
+#  artifacts:
+#    paths:
+#      - code-stats-vscode-*.vsix
