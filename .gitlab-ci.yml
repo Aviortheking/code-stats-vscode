@@ -2,6 +2,7 @@ image: node:10-alpine
 
 before_script:
   - npm install -g vsce
+  - npm install -g typescript
 
 stages:
   - prepare
