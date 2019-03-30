@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="file:///${style}">
+<link rel="stylesheet" href="${style}">
 <div class="profile">
   <h3> ${profile.user} <sup>${profile.level}</sup> ${profile.total_xp} xp
     <% if( profile.new_xp > 0 ) { %>
