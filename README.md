@@ -24,6 +24,11 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 1.0.15
+
+Merged PR from thebird956:
+Replaced deprecated 'vscode.previewHtml' command to the webview API.
+
 ### 1.0.14
 
 Updated deps and moved to latest VS code engine.

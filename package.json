@@ -2,13 +2,14 @@
   "name": "code-stats-vscode",
   "displayName": "Code::Stats",
   "description": "Code::Stats package for Visual Studio Code",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "license": "MIT",
   "publisher": "riussi",
   "contributors": [
     "Valentin Ivanov (https://github.com/scout119)",
     "Paul Ryan (https://github.com/sharpred)",
-    "Mikko Ahlroth (https://github.com/Nicd)"
+    "Mikko Ahlroth (https://github.com/Nicd)",
+    "Julien Stébenne <julien.stebenne@gmail.com> (https://github.com/thebird956)"
   ],
   "icon": "logo.png",
   "repository": {

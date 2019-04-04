@@ -1,4 +1,3 @@
-// tslint:disable-next-line:max-line-length
 import {
   Disposable,
   workspace,
@@ -10,13 +9,13 @@ import {
   TextDocument,
   StatusBarAlignment,
   TextDocumentChangeEvent,
-  Range,
   WorkspaceConfiguration,
   ExtensionContext
 } from "vscode";
 import { Pulse } from "./pulse";
 import { CodeStatsAPI } from "./code-stats-api";
 import { ProfileProvider } from "./profile-provider";
+import * as path from 'path';
 
 export class XpCounter {
   private combinedDisposable: Disposable;
@@ -25,23 +24,11 @@ export class XpCounter {
   private api: CodeStatsAPI;
   private updateTimeout: any;
 
-  //    private languages: Array<string> = ["typescript", "javascript"];
-
   // wait 10s after each change in the document before sending an update
   private UPDATE_DELAY = 10000;
 
-
   constructor(context: ExtensionContext) {
     this.pulse = new Pulse();
-
-    /* // print out supported language names
-        let allLanguages = languages.getLanguages().then(
-            (result => {
-                console.log(JSON.stringify(result));
-            })
-        );
-        */
-
     this.initAPI();
 
     let subscriptions: Disposable[] = [];
@@ -68,8 +55,19 @@ export class XpCounter {
         window.showErrorMessage('codestats.username configuration setting is missing');
         return;
       }
+      
+      const panel = window.createWebviewPanel(
+        'codeStatsPanel',
+        'Code::Stats Profile',
+        ViewColumn.Two,
+        {
+          localResourceRoots: [Uri.file(path.join(context.extensionPath, 'assets'))]
+        }
+      );
 
-      commands.executeCommand('vscode.previewHtml',  Uri.parse('code-stats://profile'), ViewColumn.Two, 'Code::Stats Profile');
+      workspace.openTextDocument(Uri.parse('code-stats://profile')).then((value) => {
+        panel.webview.html = value.getText();
+      });
     }));
     
     workspace.onDidChangeTextDocument(
@@ -154,7 +152,7 @@ export class XpCounter {
       `
     );
 
-    if( this.api != null )
+    if(this.api != null )
       this.api.updateSettings(apiKey, apiURL, userName);
     else
       this.api = new CodeStatsAPI(apiKey,apiURL,userName);

@@ -2,6 +2,7 @@
 import * as fs from 'fs';
 import { CancellationToken, Event, ExtensionContext, TextDocumentContentProvider, Uri } from "vscode";
 import { CodeStatsAPI } from "./code-stats-api";
+import * as path from 'path';
 
 import template = require('lodash.template');
 
@@ -88,7 +89,10 @@ export class ProfileProvider implements TextDocumentContentProvider {
     
       let html = template(htmlTemplate);
           
-      return html({profile: profile, languages: languages, machines: machines, style: this.context.asAbsolutePath("assets/profile.css")});
+      const stylePath = Uri.file(path.join(this.context.extensionPath, 'assets', 'profile.css'));
+      const styleSrc = stylePath.with({scheme: 'vscode-resource'});
+
+      return html({profile: profile, languages: languages, machines: machines, style: styleSrc});
 
     });
   }
