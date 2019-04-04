@@ -2,14 +2,18 @@
 
 All notable changes to the "code-stats-vscode" extension will be documented in this file.
 
+## [1.0.15] - 2019-04-04
+
+### Changed
+
+Merged PR from thebird956:
+Replaced deprecated 'vscode.previewHtml' command to the webview API. 
+
 ## [1.0.14] - 2019-04-04
 
 ### Changed
 
 Updated deps and VS code engine version.
-
-Replaced deprecated 'vscode.previewHtml' command to the webview API.
-Updated the VSCode NPM package to latest.
 
 ## [1.0.13] - 2018-11-28
 
