@@ -67,6 +67,7 @@ export function getLanguageName(langId: string): string {
     perl6: "Perl 6",
     php: "PHP",
     powershell: "PowerShell",
+    qsharp: "Q#",
     jade: "Pug",
     python: "Python",
     r: "R",

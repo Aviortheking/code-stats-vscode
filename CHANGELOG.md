@@ -6,6 +6,8 @@ All notable changes to the "code-stats-vscode" extension will be documented in t
 
 ### Changed
 
+Added Q# to languages.
+
 Merged PR from thebird956:
 Replaced deprecated 'vscode.previewHtml' command to the webview API. 
 

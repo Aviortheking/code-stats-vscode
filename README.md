@@ -26,6 +26,8 @@ This extension contributes the following settings:
 
 ### 1.0.15
 
+Added Q# to languages.
+
 Merged PR from thebird956:
 Replaced deprecated 'vscode.previewHtml' command to the webview API.
 
