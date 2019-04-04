@@ -24,6 +24,10 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 1.0.14
+
+Updated deps and moved to latest VS code engine.
+
 ### 1.0.13
 
 Updated some outdated vulnerable dependency packages. Moved the repo to Gitlab.

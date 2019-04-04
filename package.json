@@ -2,7 +2,7 @@
   "name": "code-stats-vscode",
   "displayName": "Code::Stats",
   "description": "Code::Stats package for Visual Studio Code",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "license": "MIT",
   "publisher": "riussi",
   "contributors": [
@@ -16,7 +16,7 @@
     "url": "https://gitlab.com/juha.ristolainen/code-stats-vscode"
   },
   "engines": {
-    "vscode": "^1.29.1"
+    "vscode": "^1.32.3"
   },
   "categories": [
     "Other"
@@ -59,12 +59,12 @@
     "test": "node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
-    "@types/mocha": "^5.2.4",
-    "@types/node": "^10.5.1",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^10.5.3",
     "growl": "^1.10.5",
-    "mocha": "^5.2.0",
-    "typescript": "^2.9.2",
-    "vscode": "^1.1.22"
+    "mocha": "^6.0.2",
+    "typescript": "^3.4.1",
+    "vscode": "^1.1.33"
   },
   "dependencies": {
     "axios": "0.18.0",
