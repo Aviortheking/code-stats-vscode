@@ -1,45 +1,20 @@
 image: node:10-alpine
 
 stages:
-  #  - build
-  - test
-#  - package
+  - package
 
-code_quality:
-  stage: test
-  image: docker:stable
-  variables:
-    DOCKER_DRIVER: overlay2
-  allow_failure: true
-  services:
-    - docker:stable-dind
+package:
+  stage: package
+  before_script:
+    - npm install -g vsce
+    - npm install -g typescript
+    - npm install
+  cache:
+    paths:
+      - node_modules/
   script:
-    - export SP_VERSION=$(echo "$CI_SERVER_VERSION" | sed 's/^\([0-9]*\)\.\([0-9]*\).*/\1-\2-stable/')
-    - docker run
-      --env SOURCE_CODE="$PWD"
-      --volume "$PWD":/code
-      --volume /var/run/docker.sock:/var/run/docker.sock
-      "registry.gitlab.com/gitlab-org/security-products/codequality:$SP_VERSION" /code
+    - vsce package
   artifacts:
-    reports:
-      codequality: gl-code-quality-report.json
-#transpile:
-#  stage: build
-#  before_script:
-#    - npm install -g vsce
-#    - npm install -g typescript
-#    - npm install
-#  script:
-#    - tsc -p ./
-#package:
-#  stage: package
-#  cache:
-#    paths:
-#      - node_modules/
-#    policy: pull
-#  script:
-#    - vsce package
-#  artifacts:
-#    paths:
-#      - code-stats-vscode-*.vsix
+    paths:
+      - code-stats-vscode-*.vsix
 
