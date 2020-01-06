@@ -27,6 +27,12 @@ export class XpCounter {
   // wait 10s after each change in the document before sending an update
   private UPDATE_DELAY = 10000;
 
+  // List of detected output languages to filter out and not send to the backend.
+  private filterOutLanguages: string[] = [
+    "arduino-output",
+    "code-runner-output"
+  ]
+
   constructor(context: ExtensionContext) {
     this.pulse = new Pulse();
     this.initAPI();
@@ -127,8 +133,11 @@ export class XpCounter {
   }
 
   private isSupportedLanguage(language: string): boolean {
-    // todo: check supported languages
-    // only update xp if one of supported languages
+    // Check if detected language is something we don't want to send to backend like the code runner output
+    if (this.filterOutLanguages.includes(language)) {
+      console.log("Filtering out " + language);
+      return false;
+    }
     return true;
   }
 

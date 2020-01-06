@@ -2,6 +2,13 @@
 
 All notable changes to the "code-stats-vscode" extension will be documented in this file.
 
+## [1.0.16] - 2020-01-06
+
+### Changed
+
+Updated dependencies.
+Filtered out certain output types like code runner output, etc.
+
 ## [1.0.15] - 2019-04-04
 
 ### Changed

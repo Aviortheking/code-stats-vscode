@@ -24,6 +24,11 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 1.0.16
+
+Updated dependencies.
+Added filtering out of some output languages like code runner, etc.
+
 ### 1.0.15
 
 Added Q# to languages.
