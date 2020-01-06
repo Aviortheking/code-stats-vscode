@@ -2,7 +2,7 @@
   "name": "code-stats-vscode",
   "displayName": "Code::Stats",
   "description": "Code::Stats package for Visual Studio Code",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "license": "MIT",
   "publisher": "riussi",
   "contributors": [

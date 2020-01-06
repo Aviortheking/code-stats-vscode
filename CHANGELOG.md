@@ -2,7 +2,7 @@
 
 All notable changes to the "code-stats-vscode" extension will be documented in this file.
 
-## [1.0.16] - 2020-01-06
+## [1.0.16/1.0.17] - 2020-01-06
 
 ### Changed
 

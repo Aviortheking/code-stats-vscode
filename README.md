@@ -24,7 +24,7 @@ This extension contributes the following settings:
 
 ## Release Notes
 
-### 1.0.16
+### 1.0.16/1.0.17
 
 Updated dependencies.
 Added filtering out of some output languages like code runner, etc.
