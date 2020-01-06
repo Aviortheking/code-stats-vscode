@@ -30,7 +30,11 @@ export class XpCounter {
   // List of detected output languages to filter out and not send to the backend.
   private filterOutLanguages: string[] = [
     "arduino-output",
-    "code-runner-output"
+    "code-runner-output",
+    "jest-snapshot",
+    "Diff",
+    "testOutput",
+    "Log"
   ]
 
   constructor(context: ExtensionContext) {
