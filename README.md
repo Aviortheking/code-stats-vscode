@@ -24,6 +24,10 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 1.0.18
+
+Updated dependencies.
+
 ### 1.0.16/1.0.17
 
 Updated dependencies.

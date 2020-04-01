@@ -2,6 +2,12 @@
 
 All notable changes to the "code-stats-vscode" extension will be documented in this file.
 
+## [1.0.18] - 2020-04-01
+
+### Changed
+
+Updated dependencies.
+
 ## [1.0.16/1.0.17] - 2020-01-06
 
 ### Changed
@@ -16,7 +22,7 @@ Filtered out certain output types like code runner output, etc.
 Added Q# to languages.
 
 Merged PR from thebird956:
-Replaced deprecated 'vscode.previewHtml' command to the webview API. 
+Replaced deprecated 'vscode.previewHtml' command to the webview API.
 
 ## [1.0.14] - 2019-04-04
 
