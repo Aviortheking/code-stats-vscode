@@ -4,7 +4,7 @@
   "description": "Code::Stats package for Visual Studio Code",
   "version": "1.0.18",
   "license": "MIT",
-  "publisher": "riussi",
+  "publisher": "codestats",
   "contributors": [
     "Valentin Ivanov (https://github.com/scout119)",
     "Paul Ryan (https://github.com/sharpred)",
