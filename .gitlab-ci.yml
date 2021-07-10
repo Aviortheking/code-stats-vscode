@@ -8,12 +8,14 @@ package:
   before_script:
     - npm install -g vsce
     - npm install -g typescript
+    - npm install -g ovsx
     - npm install
   cache:
     paths:
       - node_modules/
   script:
     - vsce package
+    - ovsx publish code-stats-vscode-*.vsix -p $OPEN_VSX_TOKEN
   artifacts:
     paths:
       - code-stats-vscode-*.vsix
