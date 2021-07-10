@@ -2,6 +2,7 @@ image: node:10-alpine
 
 stages:
   - package
+  - publish
 
 package:
   stage: package
@@ -15,8 +16,17 @@ package:
       - node_modules/
   script:
     - vsce package
-    - ovsx publish code-stats-vscode-*.vsix -p $OPEN_VSX_TOKEN
   artifacts:
     paths:
       - code-stats-vscode-*.vsix
 
+publish:
+  stage: publish
+  needs:
+    - package
+  only:
+    - tags
+  before_script:
+    - npm install -g ovsx
+  script:
+    - ovsx publish code-stats-vscode-*.vsix -p $OPEN_VSX_TOKEN
