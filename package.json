@@ -31,6 +31,10 @@
     "*"
   ],
   "main": "./out/src/code-stats",
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
   "contributes": {
     "configuration": {
       "type": "object",
