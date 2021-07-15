@@ -2,6 +2,11 @@
 
 All notable changes to the "code-stats-vscode" extension will be documented in this file.
 
+## [1.1.0] - 2021-07-15
+
+- Extension now works on remote containers without anything to do
+- A command can now be used to set the API_KEY setting
+
 ## [1.0.18] - 2020-04-01
 
 ### Changed

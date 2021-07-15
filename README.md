@@ -2,9 +2,9 @@
 
 This is a Visual Studio Code extension to send updates to [https://codestats.net](https://codestats.net)
 
-## NOTICE
+## Note
 
-I had to publish the latest version under a new publisher account. This means that if you have the old version installed you won't get an update for it. You have to uninstall the 1.0.8 or older version and install the new one from the new publisher name 'riussi' from https://marketplace.visualstudio.com/items?itemName=riussi.code-stats-vscode
+This is a fork that will try stay up to date with VSCode and available on open-vsx.org
 
 ## Features
 
@@ -24,13 +24,18 @@ This extension contributes the following settings:
 
 ## Release Notes
 
+### 1.1.0
+
+- Extension now works on remote containers without anything to do
+- A command can now be used to set the API_KEY setting
+
 ### 1.0.18
 
 Updated dependencies.
 
 ### 1.0.16/1.0.17
 
-Updated dependencies.
+Updated dependencies.  
 Added filtering out of some output languages like code runner, etc.
 
 ### 1.0.15
