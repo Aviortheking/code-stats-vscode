@@ -49,7 +49,7 @@ export class XpCounter {
     }
 
     subscriptions.push(workspace.registerTextDocumentContentProvider('code-stats', new ProfileProvider(context, this.api)));
- 
+
     subscriptions.push(commands.registerCommand("code-stats.profile", () => {
 
       let config: WorkspaceConfiguration = workspace.getConfiguration(
@@ -60,12 +60,12 @@ export class XpCounter {
         window.showErrorMessage('codestats.username configuration setting is missing');
         return;
       }
-  
+
       if( config.get("username") === '' ){
         window.showErrorMessage('codestats.username configuration setting is missing');
         return;
       }
-      
+
       const panel = window.createWebviewPanel(
         'codeStatsPanel',
         'Code::Stats Profile',
@@ -79,7 +79,30 @@ export class XpCounter {
         panel.webview.html = value.getText();
       });
     }));
-    
+
+    subscriptions.push(commands.registerCommand('code-stats.api-key', async () => {
+      // Display an input box to allow to change the API key
+      const response = await window.showInputBox({title: 'Enter your Code::Stats API key', placeHolder: 'xxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'})
+
+      // do nothing if nothing was entered
+      if (!response) {
+        return
+      }
+
+      // Fetch the configuration
+      const config = workspace.getConfiguration(
+        "codestats",
+      );
+
+      // Update the apiKey globally
+      // TODO: maybe add some sort of validation
+      config.update('apikey', response, true)
+
+      // Reload the API
+      this.initAPI()
+      window.showInformationMessage('API Key successfully updated!')
+    }))
+
     workspace.onDidChangeTextDocument(
       this.onTextDocumentChanged,
       this,
@@ -156,11 +179,11 @@ export class XpCounter {
     const apiKey: string = config.get("apikey");
     const apiURL: string = config.get("apiurl");
     const userName: string = config.get("username");
-    
+
     console.log(
       `code-stats-vscode setting up:
       API URL: ${apiURL}
-      NAME:    ${userName}      
+      NAME:    ${userName}
       KEY:     ${apiKey}
       `
     );

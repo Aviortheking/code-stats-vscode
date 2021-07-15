@@ -9,7 +9,8 @@
     "Valentin Ivanov (https://github.com/scout119)",
     "Paul Ryan (https://github.com/sharpred)",
     "Mikko Ahlroth (https://github.com/Nicd)",
-    "Julien Stébenne <julien.stebenne@gmail.com> (https://github.com/thebird956)"
+    "Julien Stébenne <julien.stebenne@gmail.com> (https://github.com/thebird956)",
+    "Avior <contact@avior.me> (https://github.com/aviortheking)"
   ],
   "icon": "logo.png",
   "repository": {
@@ -23,12 +24,17 @@
     "Other"
   ],
   "maintainers": [
-    "Juha Ristolainen"
+    "Juha Ristolainen",
+    "Avior"
   ],
   "activationEvents": [
     "*"
   ],
   "main": "./out/src/code-stats",
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
   "contributes": {
     "configuration": {
       "type": "object",
@@ -51,21 +57,25 @@
         }
       }
     },
-    "commands": []
+    "commands": [
+      {
+        "title": "Add your Code::Stats API Key",
+        "command": "code-stats.api-key"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "tsc -p ./",
-    "compile": "tsc -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "node ./node_modules/vscode/bin/test"
+    "compile": "tsc -watch -p ./"
   },
   "devDependencies": {
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.9.8",
+    "@types/vscode": "^1.43.2",
     "growl": "^1.10.5",
     "mocha": "^7.1.1",
     "typescript": "^3.8.3",
-    "vscode": "^1.1.36"
+    "vscode-test": "^1.5.2"
   },
   "dependencies": {
     "axios": "^0.19.2",
