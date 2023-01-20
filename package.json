@@ -31,6 +31,7 @@
     "*"
   ],
   "main": "./out/src/code-stats",
+  "browser": "./out/browser",
   "extensionKind": [
     "ui",
     "workspace"
@@ -66,19 +67,25 @@
   },
   "scripts": {
     "vscode:prepublish": "tsc -p ./",
-    "compile": "tsc -watch -p ./"
+    "compile": "tsc -watch -p ./",
+    "test:browser": "vscode-test-web --extensionDevelopmentPath=. .",
+    "compile:browser": "node esbuild.js"
   },
   "devDependencies": {
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
     "@types/mocha": "^7.0.2",
     "@types/node": "^13.9.8",
+    "@types/node-fetch": "^2.6.2",
     "@types/vscode": "^1.43.2",
+    "@vscode/test-web": "^0.0.34",
+    "esbuild": "^0.17.3",
     "growl": "^1.10.5",
     "mocha": "^7.1.1",
     "typescript": "^3.8.3",
     "vscode-test": "^1.5.2"
-  },
-  "dependencies": {
-    "axios": "^0.19.2",
-    "lodash.template": "^4.5.0"
+},
+"dependencies": {
+    "lodash.template": "^4.5.0",
+	"node-fetch": "^2.6.8"
   }
 }

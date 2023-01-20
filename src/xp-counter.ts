@@ -1,22 +1,12 @@
+import * as path from 'path'
 import {
-  Disposable,
-  workspace,
-  window,
-  Uri,
-  ViewColumn,
-  commands,
-  StatusBarItem,
-  TextDocument,
-  StatusBarAlignment,
-  TextDocumentChangeEvent,
-  WorkspaceConfiguration,
-  ExtensionContext
-} from "vscode";
-import { Pulse } from "./pulse";
-import { CodeStatsAPI } from "./code-stats-api";
-import { ProfileProvider } from "./profile-provider";
-import * as path from 'path';
-
+	commands, Disposable, ExtensionContext, StatusBarAlignment, StatusBarItem,
+	TextDocument, TextDocumentChangeEvent, Uri,
+	ViewColumn, window, workspace, WorkspaceConfiguration
+} from "vscode"
+import { CodeStatsAPI } from "./code-stats-api"
+import { ProfileProvider } from "./profile-provider"
+import { Pulse } from "./pulse"
 export class XpCounter {
   private combinedDisposable: Disposable;
   private statusBarItem: StatusBarItem;
